@@ -1,0 +1,310 @@
+/* 레이아웃 */
+body {
+  margin: 0;
+  background-color: lightblue;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 해달 본체 */
+.sea-otter {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 300px;
+  height: 100px;
+  transform: rotateZ(80deg);
+  animation: flow 10s linear infinite alternate;
+}
+
+.head-wrap {
+  position: relative;
+  width: 250px;
+  z-index: 1;
+}
+
+/* 해달 귀 */
+.ears {
+  position: absolute;
+  width: 55px;
+  height: 50px;
+  background-color: #5d4037;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  top: 5px;
+  box-shadow: inset 0px 0px 10px 10px #3e2723;
+}
+.ears.right {
+  position: absolute;
+  right: 0;
+  transform: rotate(45deg);
+}
+.ears.left {
+  transform: rotate(-45deg);
+}
+
+/* 해달 얼굴 */
+.face {
+  width: 250px;
+  height: 200px;
+  background-color: #bcaaa4;
+  border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+  position: relative;
+  box-shadow: inset -15px -15px 40px 10px #8d6e63;
+}
+
+/* 해달 눈 */
+.eyes {
+  width: 18px;
+  height: 20px;
+  background-color: #151515;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(65px, 60px);
+  box-shadow: inset -1px 0px 5px 2px #000;
+}
+.eyes.right {
+  left: 100px;
+  animation: blink 1.2s infinite alternate;
+}
+
+/* 해달 코 */
+.nose {
+  width: 30px;
+  height: 25px;
+  background-color: #464646;
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+  transform: translate(110px, 70px);
+  position: absolute;
+  z-index: 1;
+  box-shadow: inset -2px 0px 8px 2px #000;
+}
+
+/* 해달 입 */
+.mouth {
+  width: 25px;
+  height: 10px;
+  border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
+  background-color: #bcaaa4;
+  border: 5px solid #161616;
+  border-top: none;
+  position: absolute;
+}
+.mouth.left {
+  transform: translate(95px, 85px);
+}
+.mouth.right {
+  transform: translate(120px, 85px);
+}
+
+/* 해달 몸통 */
+.body {
+  width: 250px;
+  height: 350px;
+  background-color: #8d6e63;
+  border-radius: 20% 20% 50% 50% / 40% 40% 35% 35%;
+  position: absolute;
+  top: 180px;
+  box-shadow: inset 0px 150px 60px 1px #a1887f;
+}
+
+/* 해달 팔 */
+.arm {
+  position: absolute;
+  width: 70px;
+  height: 100px;
+  background-color: #a1887f;
+  border-bottom: 5px solid #5d4037;
+  border-right: 0.1px solid rgba(93, 64, 55, 0.3);
+  border-left: 0.1px solid rgba(93, 64, 55, 0.3);
+  border-radius: 0% 0% 45% 45% / 10% 10% 50% 50%;
+  top: 55px;
+}
+.arm::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: #5d4037;
+  left: 25px;
+  bottom: 0;
+  top: 81px;
+  transform: rotate(-4deg);
+  border-radius: 3px 3px 0 0;
+}
+.arm::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: #5d4037;
+  right: 25px;
+  top: 81px;
+  bottom: 0;
+  transform: rotate(8deg);
+  border-radius: 3px 3px 0 0;
+}
+.arm.left {
+  transform: rotate(-40deg);
+  left: 40px;
+}
+.arm.right {
+  transform: rotate(40deg);
+  right: 40px;
+}
+.shell {
+  position: absolute;
+  transform: translate(50px, 50px);
+  width: 150px;
+}
+
+/* 해달 발 */
+.foot {
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  background-color: #5d4037;
+  border-radius: 45%;
+  box-shadow: inset 0px 0px 15px 10px #3e2723;
+}
+.foot.left {
+  transform: translate(20px, 200px) rotate(-20deg);
+  animation: rotateLeft 3s infinite alternate;
+}
+.foot.right {
+  transform: translate(150px, 200px) rotate(20deg);
+  animation: rotateRight 3s infinite alternate;
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  background-color: #000;
+  border-radius: 45%;
+  box-shadow: inset 0px 0px 20px 1px #151515;
+}
+.dot.left {
+  top: 15px;
+  left: 8px;
+  transform: rotate(15deg);
+}
+.dot.mid {
+  top: 5px;
+  left: 30px;
+}
+.dot.right {
+  top: 15px;
+  right: 8px;
+  transform: rotate(-15deg);
+}
+.dot.large {
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  left: 15px;
+}
+
+/* 해달 꼬리 */
+.tail {
+  width: 100px;
+  height: 160px;
+  background-color: #5d4037;
+  border-radius: 35% 35% 50% 50% / 50% 50% 30% 30%;
+  position: relative;
+  top: 310px;
+  left: 75px;
+  z-index: -1;
+  box-shadow: inset -10px 0px 20px 20px #3e2723;
+  animation: 2s tail_swing ease-in-out infinite alternate;
+}
+.tail:hover {
+  transition: 1s;
+  transform: translate(-20px);
+}
+
+/* 구름 */
+.cloud {
+  position: absolute;
+  left: 60px;
+  top: 50px;
+  opacity: 0.8;
+}
+.cloud-pieces {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+}
+.cloud-pieces:nth-child(1) {
+  border-radius: 50%;
+}
+.cloud-pieces:nth-child(2) {
+  border-radius: 50% 40% 0% 59% / 50% 40% 10% 50%;
+  left: -50px;
+  top: 50px;
+}
+.cloud-pieces:nth-child(3) {
+  border-radius: 50% 40% 50% 35% / 54% 49% 50% 0%;
+  left: 50px;
+  top: 50px;
+}
+
+.cloud_one {
+  animation: cloud_one 10s infinite alternate;
+}
+.cloud_two {
+  animation: cloud_two 20s infinite alternate;
+}
+.cloud_three {
+  animation: cloud_three 15s infinite alternate;
+}
+
+/* 물결 */
+.wavecontainer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: lightblue;
+  margin-left: -13px;
+  z-index: -1;
+}
+
+.wave {
+  height: 250px;
+  width: 285px;
+  background: #4cf;
+  border-radius: 50%;
+  animation: wave 5s infinite alternate linear;
+}
+.wave::before {
+  content: "";
+  position: relative;
+  display: block;
+  margin-left: 456px;
+  height: 250px;
+  width: 300px;
+  background: #4cf;
+  border-radius: 50%;
+}
+.wave::after {
+  content: "";
+  position: relative;
+  display: block;
+  margin-left: 245px;
+  margin-top: -380px;
+  height: 250px;
+  width: 250px;
+  background: lightblue;
+  border-radius: 50%;
+}
+.bottom {
+  background: #4cf;
+  width: 100%;
+  height: 600px;
+  margin-top: -182px;
+}
