@@ -427,3 +427,14 @@ body {
   margin-top: -182px;
   box-shadow: inset -30px -100px 100px 20px dodgerblue;
 }
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1024px) {
+  .wavecontainer {
+    display: none;
+  }
+  .sea-otter {
+    position: absolute;
+    left: 30%;
+  }
+}
