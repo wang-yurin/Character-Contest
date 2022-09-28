@@ -225,6 +225,7 @@ body {
   border-left: 0.1px solid rgba(93, 64, 55, 0.3);
   border-radius: 0% 0% 45% 45% / 10% 10% 50% 50%;
   top: 55px;
+  z-index: 10;
 }
 .arm::after {
   content: "";
@@ -255,6 +256,7 @@ body {
 .arm.left {
   transform: rotate(-40deg);
   left: 40px;
+  animation: face_left 3s infinite alternate linear;
 }
 .arm.right {
   transform: rotate(40deg);
@@ -264,6 +266,7 @@ body {
   position: absolute;
   transform: translate(50px, 50px);
   width: 150px;
+  z-index: 1;
 }
 
 /* 해달 발 */
